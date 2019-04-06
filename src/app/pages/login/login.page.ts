@@ -39,7 +39,7 @@ export class LoginPage implements OnInit {
       await this.loading.present();
 
       const email = loginForm.value.email;
-      const password = loginForm.value.email;
+      const password = loginForm.value.password;
 
       this.authService.loginUser(email, password).then(() => {
         this.loading.dismiss().then(() => {

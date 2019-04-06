@@ -8,9 +8,9 @@ const routes: Routes = [
   { path: 'home', loadChildren: './home/home.module#HomePageModule', canActivate: [AuthGuard] },
   { path: 'event-create', loadChildren: './pages/event-create/event-create.module#EventCreatePageModule', canActivate: [AuthGuard] },
   { path: 'event-detail/:id', loadChildren: './pages/event-detail/event-detail.module#EventDetailPageModule', canActivate: [AuthGuard] },
-  { path: 'event-list', loadChildren: './pages/event-list/event-list.module#EventListPageModule' },
+  { path: 'event-list', loadChildren: './pages/event-list/event-list.module#EventListPageModule', canActivate: [AuthGuard] },
   { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
-  { path: 'profile', loadChildren: './pages/profile/profile.module#ProfilePageModule' },
+  { path: 'profile', loadChildren: './pages/profile/profile.module#ProfilePageModule', canActivate: [AuthGuard] },
   { path: 'reset-password', loadChildren: './pages/reset-password/reset-password.module#ResetPasswordPageModule' },
   { path: 'signup', loadChildren: './pages/signup/signup.module#SignupPageModule' },
 ];
